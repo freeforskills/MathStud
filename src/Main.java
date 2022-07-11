@@ -38,9 +38,11 @@ public class Main {
         Students s2 = new Students(3);
         Students s3 = new Students(1);
 
-        s1.start(getdata(pathIn), time, 1);
-        s2.start(getdata(pathIn), time, 2);
-        s3.start(getdata(pathIn), time, 3);
+        ArrayList<Integer> zadachi = getdata(pathIn);
+
+        s1.start(zadachi, time, 1);
+        s2.start(zadachi, time, 2);
+        s3.start(zadachi, time, 3);
 
         Students.getWinner(pathOut);
     }
